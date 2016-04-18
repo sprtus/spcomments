@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- Parent ContentType: Item (0x01) -->
+    <ContentType ID="0x010090D83843617F43B4A028F1E4489C7126" Name="Flagged Comment" Group="Custom Content Types" Description="" Inherits="TRUE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{c6fd62b0-8060-40bb-956f-595a75f47c58}" DisplayName="Comment ID" Required="TRUE" Name="CommentID" />
+            <FieldRef ID="{b0828a0a-1c00-4c50-afb3-096858ae9d32}" DisplayName="Comment Url" Required="FALSE" Name="CommentUrl" />
+            <FieldRef ID="{a5dbe9ed-38f5-48d8-9a72-60636e8b1cff}" DisplayName="Comment Body" Required="FALSE" Name="CommentBody" />
+        </FieldRefs>
+    </ContentType>
+</Elements>

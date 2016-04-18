@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="Comments"
+        Type="100"
+        BaseType="0"
+        OnQuickLaunch="TRUE"
+        SecurityBits="11"
+        Sequence="410"
+        DisplayName="Comments"
+        Description="Page comments made by users throughout the site collection."
+        Image="/_layouts/15/images/itgen.png"/>
+</Elements>

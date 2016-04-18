@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Field
+        ID="{2b5e7186-1d39-4dce-8e1d-e9ca7246b5de}"
+        Name="NoComments"
+        DisplayName="No Comments"
+        Description="Disable comments on this page."
+        Type="Boolean"
+        Required="FALSE"
+        Group="Custom Site Columns"
+        StaticName="NoComments"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3">
+    <Default>0</Default>
+    </Field>
+</Elements>

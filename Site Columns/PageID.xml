@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Field
+        ID="{1fb91f46-1938-456f-b794-98e380832831}"
+        Name="PageID"
+        DisplayName="Page ID"
+        Type="Text"
+        Required="FALSE"
+        Group="Custom Site Columns"
+        StaticName="PageID"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3">
+    </Field>
+</Elements>

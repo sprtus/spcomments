@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="FlaggedComments" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/FlaggedComments" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE">
+    <MetaData>
+        <ContentTypes>
+            <ContentType ID="0x010090D83843617F43B4A028F1E4489C7126" Name="Flagged Comment" Group="Custom Content Types" Description="" Inherits="TRUE" Version="0">
+                <FieldRefs>
+                    <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+                    <FieldRef ID="{c6fd62b0-8060-40bb-956f-595a75f47c58}" DisplayName="Comment ID" Required="TRUE" Name="CommentID" />
+                    <FieldRef ID="{b0828a0a-1c00-4c50-afb3-096858ae9d32}" DisplayName="Comment Url" Required="FALSE" Name="CommentUrl" />
+                    <FieldRef ID="{a5dbe9ed-38f5-48d8-9a72-60636e8b1cff}" DisplayName="Comment Body" Required="FALSE" Name="CommentBody" />
+                </FieldRefs>
+            </ContentType>
+        </ContentTypes>
+        <Fields>
+            <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" Required="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" />
+            <Field ID="{c6fd62b0-8060-40bb-956f-595a75f47c58}" Name="CommentID" DisplayName="Comment ID" Type="Text" Required="TRUE" Group="Custom Site Columns"></Field>
+            <Field ID="{b0828a0a-1c00-4c50-afb3-096858ae9d32}" Name="CommentUrl" DisplayName="Comment Url" Type="Text" Required="FALSE" Group="Custom Site Columns"></Field>
+            <Field ID="{a5dbe9ed-38f5-48d8-9a72-60636e8b1cff}" Name="CommentBody" DisplayName="Comment Body" Type="HTML" Required="TRUE" Group="Custom Site Columns" RichText="TRUE" RichTextMode="FullHtml"></Field>
+        </Fields>
+        <Views>
+            <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+                <Toolbar Type="Standard" />
+                <XslLink Default="TRUE">main.xsl</XslLink>
+                <RowLimit Paged="TRUE">30</RowLimit>
+                <ViewFields>
+                    <FieldRef Name="LinkTitleNoMenu"></FieldRef>
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+                    </OrderBy>
+                </Query>
+                <ParameterBindings>
+                    <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+                    <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+                    <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+                </ParameterBindings>
+            </View>
+            <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+                <Toolbar Type="Standard" />
+                <XslLink Default="TRUE">main.xsl</XslLink>
+                <JSLink>clienttemplates.js</JSLink>
+                <RowLimit Paged="TRUE">30</RowLimit>
+                <ViewFields>
+                    <FieldRef Name="CommentID" />
+                    <FieldRef Name="CommentUrl" />
+                    <FieldRef Name="CommentBody" />
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="Created" Ascending="FALSE"></FieldRef>
+                    </OrderBy>
+                </Query>
+                <ParameterBindings>
+                    <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+                    <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+                </ParameterBindings>
+            </View>
+        </Views>
+        <Forms>
+            <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+            <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+            <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+        </Forms>
+    </MetaData>
+</List>

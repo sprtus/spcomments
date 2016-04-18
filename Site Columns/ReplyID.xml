@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Field
+        ID="{fabd2824-4209-4dfd-a012-b92ec2f6e813}"
+        Name="ReplyID"
+        DisplayName="Reply ID"
+        Type="Lookup"
+        List="Lists/Comments"
+        ShowField="ID"
+        Required="FALSE"
+        Group="Custom Site Columns"
+        StaticName="ReplyID"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3">
+    </Field>
+</Elements>

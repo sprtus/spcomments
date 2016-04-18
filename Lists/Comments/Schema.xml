@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="Comments" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/Comments" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE">
+    <MetaData>
+        <ContentTypes>
+            <ContentType ID="0x01009CE230118CB14B2DAB152BB4700188BC" Name="Article Comment" Group="Custom Content Types" Description="" Inherits="TRUE" Version="0">
+                <FieldRefs>
+                    <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+                    <FieldRef ID="{1fb91f46-1938-456f-b794-98e380832831}" DisplayName="Page ID" Required="TRUE" Name="PageID" />
+                    <FieldRef ID="{ddf6d5c4-56a6-4cf5-98e6-4ef5a9699395}" DisplayName="Comment Web" Required="FALSE" Name="CommentWeb" />
+                    <FieldRef ID="{fabd2824-4209-4dfd-a012-b92ec2f6e813}" DisplayName="Reply ID" Required="FALSE" Name="ReplyID" />
+                    <FieldRef ID="{a5dbe9ed-38f5-48d8-9a72-60636e8b1cff}" DisplayName="Comment Body" Required="TRUE" Name="CommentBody" />
+                </FieldRefs>
+            </ContentType>
+        </ContentTypes>
+        <Fields>
+            <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" Required="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" />
+            <Field ID="{1fb91f46-1938-456f-b794-98e380832831}" Name="PageID" DisplayName="Page ID" Type="Text" Required="TRUE" Group="Custom Site Columns"></Field>
+            <Field ID="{ddf6d5c4-56a6-4cf5-98e6-4ef5a9699395}" Name="CommentWeb" DisplayName="Comment Web" Type="Text" Required="FALSE" Group="Custom Site Columns"></Field>
+            <Field ID="{fabd2824-4209-4dfd-a012-b92ec2f6e813}" Name="ReplyID" DisplayName="Reply ID" Type="Lookup" List="Lists/Comments" ShowField="ID" Required="FALSE" Group="Custom Site Columns"></Field>
+            <Field ID="{a5dbe9ed-38f5-48d8-9a72-60636e8b1cff}" Name="CommentBody" DisplayName="Comment Body" Type="HTML" Required="TRUE" Group="Custom Site Columns" RichText="TRUE" RichTextMode="FullHtml"></Field>
+        </Fields>
+        <Views>
+            <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+                <Toolbar Type="Standard" />
+                <XslLink Default="TRUE">main.xsl</XslLink>
+                <RowLimit Paged="TRUE">30</RowLimit>
+                <ViewFields>
+                    <FieldRef Name="LinkTitleNoMenu"></FieldRef>
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+                    </OrderBy>
+                </Query>
+                <ParameterBindings>
+                    <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+                    <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+                    <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+                </ParameterBindings>
+            </View>
+            <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+                <Toolbar Type="Standard" />
+                <XslLink Default="TRUE">main.xsl</XslLink>
+                <JSLink>clienttemplates.js</JSLink>
+                <RowLimit Paged="TRUE">30</RowLimit>
+                <ViewFields>
+                    <FieldRef Name="PageID" />
+                    <FieldRef Name="CommentWeb" />
+                    <FieldRef Name="ReplyID" />
+                    <FieldRef Name="CommentBody" />
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="Created" Ascending="FALSE"></FieldRef>
+                    </OrderBy>
+                </Query>
+                <ParameterBindings>
+                    <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+                    <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+                </ParameterBindings>
+            </View>
+        </Views>
+        <Forms>
+            <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+            <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+            <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+        </Forms>
+    </MetaData>
+</List>

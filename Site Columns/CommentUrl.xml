@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Field
+        ID="{b0828a0a-1c00-4c50-afb3-096858ae9d32}"
+        Name="CommentUrl"
+        DisplayName="Comment Url"
+        Type="Text"
+        Required="FALSE"
+        Group="Custom Site Columns"
+        StaticName="CommentUrl"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3">
+    </Field>
+</Elements>

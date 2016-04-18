@@ -1,0 +1,23 @@
+<!-- Place this into your page layout where you want comments to appear. -->
+<SharePointWebControls:SPSecurityTrimmedControl AuthenticationRestrictions="AuthenticatedUsersOnly" runat="server">
+    <div id="comments-area">
+        <div id="comments-disabled"><SharePointWebControls:FieldValue FieldName="NoComments" runat="server"/></div>
+        <h3 id="comments">Comments</h3>
+        <div id="page-comments" data-page="<SharePointWebControls:FieldValue FieldName='ID' runat='server' />">
+            <div class="comments-loading">Loading comments&hellip;</div>
+        </div>
+        <h3 id="add-a-comment">Add a comment</h3>
+        <div id="page-comment-form">
+            <h3 id="add-a-reply">Add a reply</h3>
+            <input id="comment-replyto" type="hidden" value="0" />
+            <input id="comment-edit" type="hidden" value="0" />
+            <div class="comment-field">
+                <textarea id="comment-body" placeholder="Enter comments"></textarea>
+            </div>
+            <div class="comment-actions">
+                <button id="comment-submit">Add Comment</button>
+                <button id="cancel-reply">Cancel</button>
+            </div>
+        </div>
+    </div>
+</SharePointWebControls:SPSecurityTrimmedControl>

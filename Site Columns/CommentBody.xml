@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Field
+        ID="{a5dbe9ed-38f5-48d8-9a72-60636e8b1cff}"
+        Name="CommentBody"
+        DisplayName="Comment Body"
+        Type="HTML"
+        RichText="TRUE"
+        RichTextMode="FullHtml"
+        UnlimitedLengthInDocumentLibrary="TRUE"
+        Required="FALSE"
+        Group="Custom Site Columns"
+        StaticName="CommentBody"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3">
+    </Field>
+</Elements>

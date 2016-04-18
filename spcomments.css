@@ -1,0 +1,119 @@
+/* comments */
+#comments-disabled {
+    display: none;
+}
+ol.comments-list, ol.comments-list ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ol.comments-list li {
+    margin: 0;
+    padding: 0;
+}
+ol.comments-list li + li {
+    margin-top: 1.5em;
+}
+ol.comments-list li > ol {
+    margin-left: 40px;
+}
+ol.comments-list li > ol > li > ol > li > ol > li > ol {
+    margin-left: 0;
+}
+.comment-author {
+    font-weight: 700;
+}
+.comment-body {
+    white-space: pre-wrap;
+}
+.flagged-comment > .comment-body:after {
+    content: "Thank you! This comment has been flagged for review.";
+    display: block;
+    color: #fa4c06;
+}
+.comment-date {
+    color: #aaa;
+    font-weight: 400;
+}
+.comment-tools {
+    border-top: 1px dotted #ddd;
+    margin-top: 5px;
+    padding-top: 5px;
+    text-align: right;
+}
+.comment-tools a {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 35px;
+    width: 35px;
+    text-align: center;
+    border-radius: 50%;
+    color: #bbb;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-transition: color 0.2s ease, background-color 0.3s ease;
+    transition: color 0.2s ease, background-color 0.3s ease;
+}
+.comment-tools a:hover, .comment-tools a:focus {
+    background-color: #337ab7;
+    color: #fff;
+}
+.comment-tools a.delete-comment:hover, .comment-tools a.delete-comment:focus, .comment-tools a.flag-comment:hover, .comment-tools a.flag-comment:focus {
+    background-color: #fa361b;
+}
+#cancel-reply {
+    display: none;
+}
+.replying #cancel-reply, .editing #cancel-reply {
+    display: inline-block;
+}
+.replying > .comment-tools, .editing > .comment-tools, .editing > .comment-body {
+    display: none;
+}
+#add-a-reply {
+    display: none;
+}
+.replying #add-a-reply {
+    display: block;
+}
+#page-comment-form {
+    margin: 0 0 20px 0;
+}
+#comment-body {
+    position: relative;
+    display: block;
+    border: 0;
+    background: #eee;
+    padding: 10px;
+    height: 100px;
+    width: 100%;
+    border-radius: 5px;
+    -webkit-transition: box-shadow 0.3s ease;
+}
+#comment-body.with-error {
+    box-shadow: inset 0 0 8px #ff0000;
+    -webkit-animation: shake 0.15s ease;
+    animation: shake 0.5s ease;
+}
+.comment-actions {
+    margin-top: 5px;
+}
+.comment-actions button {
+    display: inline-block;
+    border: 0;
+    color: #fff;
+    padding: 0.5em 0.9em;
+    background: #00556f;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.comment-actions button + button {
+    background-color: #ccc;
+    color: #555;
+    float: right;
+}
+#add-a-reply, #add-a-comment, #comments {
+    margin: 20px 0 10px 0;
+    font-size: 1.5em;
+    font-weight: 300;
+}
